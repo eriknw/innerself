@@ -7,8 +7,8 @@ python:
     - 3.6
     - 3.7
     - 3.8
-    - "3.9-dev"
-    - "pypy3.6-7.1.1"
+    - 3.9-dev
+    - pypy3.6-7.1.1
 
 install:
     - pip install --upgrade pip
@@ -26,8 +26,6 @@ after_success:
     - coverage report --show-missing
     - pip install coveralls
     - coveralls
-
-# publish new version tags to pypi
 deploy:
     provider: pypi
     skip_existing: true
@@ -35,8 +33,8 @@ deploy:
         tags: true
     user: __token__
     password:
-        secure: TODO
-    distributions: "sdist bdist_wheel"
+        secure: WSLjGorELaaQR+PzjRfMGCF+R+mpI14Te1TIyu4ns6aO/jdsxTMLBvSR3fN2BdzWlMsdneyrYzsf4UWF5noDrZrq++aS7knYv8LTAyhLC2rCG+c3eQvLJ6HE3wUOYzGSJG3a98m01NQUFQ6ZC+2eoqHKntO4CgkieTYFVMpJWsrXneTL7aBSVKbV9XYic7B5A7F1e6Kmvff9TnoDO6d6yf9VlLalTGPK5qxcQPYk+vmUbBHkSLHE/GhWanbsyuqWlY08PsUSZ+tFoyfKwoS5uj53YCIWxfBfM3xA4LzzNB4jY+D8pEncjitzcKe9OAWJb66E0n550MxWR+5DYxkfkrheoJsK0aR4pe+brgQixxxLHQCr1h6pHlC+Jg4QwJZu4XOpXcGxYlyM9muq21W9mELmvnKpyMUrfiMG8qOxyhDSuygUPWQHpacpi6V3sBWdgbNaki2+G1gE750U+nZH5M4EcPCbryqYQaWMQGiDjmjqYCZIMS0w7Xbce+1fH1i2Zu8kV20mmY4fGYgE9mJVOdFVZxNxSdTFzGkv9NKNU6Iy4Y0MMd1AqU4gAmOMgLBb2A7lLnYNqz663QHhBpDIjQTsfsdbUqZBfwL3C8Xn1ssLMoLOCUqSq4leCLYQJIg84BwYH5QOOEa8B0nuu+RY6fACcuQZLPL91k5OmiPVzuU=
+    distributions: sdist bdist_wheel
 
 notifications:
-  email: false
+    email: false
