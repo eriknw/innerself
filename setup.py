@@ -9,7 +9,7 @@ setup(
     name="innerself",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description="Behold the power of the inner self",
+    description="The inner self is ever-present",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Erik Welch",
