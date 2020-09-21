@@ -1,6 +1,6 @@
 # Innerself
 
-[![Python Version](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%20PyPy-blue)](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%20PyPy-blue)
+[![Python Version](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%20PyPy-blue)](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%20PyPy-blue)
 [![Version](https://img.shields.io/pypi/v/innerself.svg)](https://pypi.org/project/innerself/)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://github.com/eriknw/innerself/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/eriknw/innerself.svg?branch=master)](https://travis-ci.org/eriknw/innerself)
