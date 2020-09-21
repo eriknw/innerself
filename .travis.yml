@@ -26,6 +26,7 @@ after_success:
     - coverage report --show-missing
     - pip install coveralls
     - coveralls
+
 deploy:
     provider: pypi
     skip_existing: true
