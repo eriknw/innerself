@@ -1,0 +1,42 @@
+sudo: false
+language: python
+os: linux
+dist: xenial
+
+python:
+    - 3.6
+    - 3.7
+    - 3.8
+    - "3.9-dev"
+    - "pypy3.6-7.1.1"
+
+install:
+    - pip install --upgrade pip
+    - pip install innerscope coverage pytest
+    - pip install -e .
+
+script:
+    - coverage run --branch -m pytest --doctest-modules
+    - coverage run -a --branch -m pytest --doctest-modules --method trace
+    - if [[ $TRAVIS_PYTHON_VERSION != pypy* ]] ; then pip install flake8 black ; fi
+    - if [[ $TRAVIS_PYTHON_VERSION != pypy* ]] ; then flake8 ; fi
+    - if [[ $TRAVIS_PYTHON_VERSION != pypy* ]] ; then black innerself --check --diff ; fi
+
+after_success:
+    - coverage report --show-missing
+    - pip install coveralls
+    - coveralls
+
+# publish new version tags to pypi
+deploy:
+    provider: pypi
+    skip_existing: true
+    on:
+        tags: true
+    user: __token__
+    password:
+        secure: TODO
+    distributions: "sdist bdist_wheel"
+
+notifications:
+  email: false
