@@ -17,7 +17,6 @@ install:
 
 script:
     - coverage run --branch -m pytest --doctest-modules
-    - coverage run -a --branch -m pytest --doctest-modules --method trace
     - if [[ $TRAVIS_PYTHON_VERSION != pypy* ]] ; then pip install flake8 black ; fi
     - if [[ $TRAVIS_PYTHON_VERSION != pypy* ]] ; then flake8 ; fi
     - if [[ $TRAVIS_PYTHON_VERSION != pypy* ]] ; then black innerself --check --diff ; fi
